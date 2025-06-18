@@ -36,6 +36,9 @@
     
     # 执行迁移
     alembic upgrade head
+
+    # 当模型发生变化时，修改模型代码，生成新的迁移脚本
+    alembic revision --autogenerate -m "description of changes"
     ```
 
 8. 启动 fastapi 服务
